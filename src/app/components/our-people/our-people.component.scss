@@ -1,0 +1,43 @@
+.people-section {
+    background-color: #ffffff;
+    padding: 4rem 1rem;
+  
+    h2 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 2rem;
+    }
+  
+    .people-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    .lawyer-card {
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      img {
+        height: 300px;
+        object-fit: cover;
+      }
+  
+      h3 {
+        font-family: 'Cormorant', serif;
+        margin-top: 1rem;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .lawyer-card {
+        width: 100%;
+      }
+    }
+  }
+  

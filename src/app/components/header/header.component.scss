@@ -1,0 +1,51 @@
+.header-toolbar {
+    background-color: #003366;
+    color: white;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-desktop {
+    display: flex;
+    gap: 1rem;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .consult-btn {
+    background-color: #f7e7ce;
+    color: black;
+    font-weight: bold;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .burger-btn {
+    display: none;
+  
+    @media (max-width: 768px) {
+      display: inline-flex;
+    }
+  }
+  
+  .sidenav-container {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  
+  .mobile-sidenav {
+    width: 250px;
+  }
+  

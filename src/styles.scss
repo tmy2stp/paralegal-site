@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant:wght@300;400;500&display=swap');
+
+// Color palette
+$champagne: #f7e7ce;
+$elegant-blue: #003366;
+$white: #ffffff;
+$black: #000000;
+
+// Global body styles
+body {
+  margin: 0;
+  font-family: 'Cormorant', serif;
+  background-color: $white;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+}
+
+// BUTTON STYLES
+.btn-primary {
+  background-color: $elegant-blue !important;
+  border: 2px solid $elegant-blue !important;
+  color: white !important;
+  font-family: 'Cormorant', serif;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  text-transform: none;
+  border-radius: 0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: transparent !important;
+    color: $elegant-blue !important;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  border: 2px solid $champagne !important;
+  color: $champagne !important;
+  font-family: 'Cormorant', serif;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  text-transform: none;
+  border-radius: 0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $champagne !important;
+    color: $elegant-blue !important;
+  }
+}
+
+// Material icons spacing
+mat-icon {
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}

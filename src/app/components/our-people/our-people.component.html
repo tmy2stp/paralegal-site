@@ -1,0 +1,15 @@
+<section class="people-section">
+    <div class="container text-center">
+      <h2>Our People</h2>
+      <div class="people-cards">
+        <mat-card *ngFor="let lawyer of lawyers" class="lawyer-card" (click)="goToProfile(lawyer.id)">
+          <img mat-card-image [src]="'assets/' + lawyer.image" alt="{{ lawyer.name }}">
+          <mat-card-content>
+            <h3>{{ lawyer.name }}</h3>
+            <p class="title">{{ lawyer.title }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  

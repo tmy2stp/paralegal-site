@@ -1,0 +1,29 @@
+.services-section {
+    background-color: #ffffff;
+    padding: 4rem 1rem;
+    color: #000;
+  
+    h2 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 2rem;
+    }
+  
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    .service-card {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant', serif;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
