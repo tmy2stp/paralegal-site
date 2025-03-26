@@ -19,6 +19,7 @@ import { OurPeopleComponent } from './components/our-people/our-people.component
 import { LawyerDetailComponent } from './components/lawyer-detail/lawyer-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 
 
@@ -35,6 +36,7 @@ import { AboutComponent } from './components/about/about.component';
     LawyerDetailComponent,
     HomeComponent,
     AboutComponent,
+    ReviewsComponent,
 
 
 
