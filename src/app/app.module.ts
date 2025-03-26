@@ -18,6 +18,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { OurPeopleComponent } from './components/our-people/our-people.component';
 import { LawyerDetailComponent } from './components/lawyer-detail/lawyer-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,11 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     OurPeopleComponent,
     LawyerDetailComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+
+
+
   ],
   imports: [
     BrowserModule,

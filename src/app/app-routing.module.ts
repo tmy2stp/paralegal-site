@@ -5,9 +5,12 @@ import { LawyerDetailComponent } from './components/lawyer-detail/lawyer-detail.
 import { HomeComponent } from './components/home/home.component';
 
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'lawyer/:id', component: LawyerDetailComponent }
+  { path: 'lawyer/:id', component: LawyerDetailComponent },
+
+  
 ];
 
 @NgModule({

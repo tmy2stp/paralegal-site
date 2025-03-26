@@ -6,8 +6,15 @@ $elegant-blue: #003366;
 $white: #ffffff;
 $black: #000000;
 
-// Global body styles
-body {
+// Reset + base
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   margin: 0;
   font-family: 'Cormorant', serif;
   background-color: $white;
@@ -18,8 +25,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // BUTTON STYLES
-.btn-primary {
+.btn-primary,
+a.btn-primary {
   background-color: $elegant-blue !important;
   border: 2px solid $elegant-blue !important;
   color: white !important;
@@ -29,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   border-radius: 0 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
 
   &:hover {
     background-color: transparent !important;
@@ -36,7 +54,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.btn-secondary {
+.btn-secondary,
+a.btn-secondary {
   background-color: transparent !important;
   border: 2px solid $champagne !important;
   color: $champagne !important;
@@ -46,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   border-radius: 0 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
 
   &:hover {
     background-color: $champagne !important;

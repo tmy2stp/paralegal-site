@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  navItems: string[] = ['Nav1', 'Nav2', 'Nav3', 'Nav4', 'Nav5'];
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  isSticky = false;
+
+
+  toggleSidenav() {
+    this.sidenav.toggle();
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void  {
+    this.isSticky = window.scrollY > 60;
+  }
+
 }
 
 

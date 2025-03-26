@@ -1,12 +1,12 @@
 <section class="services-section">
-    <div class="container text-center">
-      <h2>What We Offer</h2>
-      <div class="card-grid">
-        <mat-card *ngFor="let card of cards" class="service-card">
-          <mat-card-content>
-            <p>{{ card }}</p>
-          </mat-card-content>
-        </mat-card>
+    <div class="container">
+      <h2>Services We Offer</h2>
+      <div class="services-grid">
+        <div class="service-block" *ngFor="let service of services">
+          <h4>{{ service.title }}</h4>
+          <p>{{ service.copy }}</p>
+          <p class="read-more" >Read More</p>
+        </div>
       </div>
     </div>
   </section>

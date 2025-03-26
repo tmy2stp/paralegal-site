@@ -1,51 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant:wght@300;400;500&display=swap');
+
+$blue: #003366;
+$champagne: #f7e7ce;
+$offwhite: #f9f9f9;
+
+.header-wrapper {
+  font-family: 'Cormorant', serif;
+  background-color: $offwhite;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 .header-toolbar {
-    background-color: #003366;
-    color: white;
-    padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: nowrap;
+  height: auto;
+  min-height: 90px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: $offwhite;
+  transition: all 0.3s ease;
+
+  .logo-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    height: 100%;
+
+    .logo {
+      height: 64px;
+      object-fit: contain;
+    }
   }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .nav-desktop {
+
+  .desktop-right {
     display: flex;
-    gap: 1rem;
-  
-    @media (max-width: 768px) {
-      display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 0.25rem;
+      transition: opacity 0.3s ease;
+
+      .phone {
+        display: flex;
+        align-items: center;
+        color: $blue;
+        font-size: 0.9rem;
+
+        mat-icon {
+          font-size: 18px;
+          margin-right: 0.3rem;
+        }
+      }
+
+      .btn-primary {
+        border: 2px solid $blue;
+        background-color: transparent;
+        color: $blue;
+        border-radius: 0;
+        padding: 0.4rem 1rem;
+        font-weight: 500;
+        text-transform: none;
+
+        &:hover {
+          background-color: $blue;
+          color: $offwhite;
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      margin-top: 0.25rem;
+
+      a {
+        color: $blue;
+        font-size: 1.05rem;
+        font-weight: 600;
+        text-transform: none;
+        font-family: 'Cormorant', serif;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
-  
-  .consult-btn {
-    background-color: #f7e7ce;
-    color: black;
-    font-weight: bold;
-  
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-  
-  .burger-btn {
+
+  .mobile-menu-button {
     display: none;
-  
-    @media (max-width: 768px) {
-      display: inline-flex;
-    }
   }
-  
-  .sidenav-container {
-    @media (min-width: 769px) {
+
+  &.sticky {
+    padding-bottom: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .top-row {
       display: none;
     }
   }
-  
-  .mobile-sidenav {
-    width: 250px;
+}
+
+// -------------------------
+// Mobile Styles
+// -------------------------
+
+@media (max-width: 768px) {
+  .desktop-right {
+    display: none !important;
   }
-  
+
+  .mobile-menu-button {
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+  }
+
+  .mobile-sidenav {
+    display: block;
+    height: auto;
+
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+
+      a,
+      .phone,
+      .btn-primary {
+        color: $blue;
+        font-family: 'Cormorant', serif;
+      }
+
+      .btn-primary {
+        border: 2px solid $blue;
+        background: transparent;
+        text-transform: none;
+
+        &:hover {
+          background-color: $blue;
+          color: white;
+        }
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+
+        mat-icon {
+          font-size: 18px;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
