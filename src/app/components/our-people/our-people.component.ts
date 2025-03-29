@@ -11,7 +11,7 @@ export class OurPeopleComponent {
   lawyers = [
     { id: 1, name: 'Jimmy Gangadin ', title: 'Senior Paralegal',  image: 'lawyer1.jpg' },
     { id: 2, name: 'Omar Rambhajan', title: 'B.A., LL.B, LL.M', image: 'lawyer2.jpg' },
-    { id: 3, name: 'Darah Vaz', title: 'Paralegal', image: 'lawyer3.jpg' }
+    { id: 3, name: 'Sarah Vaz', title: 'Paralegal', image: 'lawyer3.jpg' }
   ];
 
 

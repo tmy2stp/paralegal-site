@@ -30,11 +30,30 @@ $offwhite: #f9f9f9;
   .logo-container {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     height: 100%;
 
     .logo {
       height: 64px;
       object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: black;
+
+      .line-1,
+      .line-2 {
+        font-size: 1.1rem;
+      }
+
+      .line-1 {
+        margin-bottom: 0.2rem;
+      }
     }
   }
 
@@ -105,7 +124,6 @@ $offwhite: #f9f9f9;
   }
 
   &.sticky {
-    padding-bottom: 0.4rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
     .top-row {
@@ -169,4 +187,20 @@ $offwhite: #f9f9f9;
       }
     }
   }
+
+  .logo-container {
+    .logo-text {
+      .line-1,
+      .line-2 {
+        font-size: 1rem;
+      }
+    }
+  }
 }
+
+
+.header-toolbar.sticky {
+    padding-bottom: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  

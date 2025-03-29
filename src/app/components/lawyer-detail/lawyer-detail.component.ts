@@ -31,7 +31,7 @@ export class LawyerDetailComponent implements OnInit {
         photo: 'assets/lawyer2.jpg'
       },
       3: {
-        name: 'Darah Vaz',
+        name: 'Sarah Vaz',
         title: 'Human Rights Paralegal',
         bio: 'Focuses on immigration and human rights law. Darah is passionate about equity and access to justice.',
         photo: 'assets/lawyer3.jpg'
