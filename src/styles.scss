@@ -11,8 +11,10 @@ $black: #000000;
   box-sizing: border-box;
 }
 
+
 html, body {
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
   margin: 0;

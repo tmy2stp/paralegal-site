@@ -38,17 +38,15 @@
   
       <!-- Mobile burger menu -->
       <div class="mobile-menu-button">
-
         <button mat-icon-button (click)="toggleSidenav()">
           <mat-icon>menu</mat-icon>
-          
         </button>
       </div>
     </mat-toolbar>
   
     <!-- Mobile sidenav -->
-    <mat-sidenav-container class="mobile-sidenav" autosize style="height: 0; width: 100%;">
-      <mat-sidenav #sidenav mode="over" position="end">
+    <mat-sidenav-container class="mobile-sidenav-container">
+      <mat-sidenav #sidenav mode="over" position="end" disableClose>
         <nav class="mobile-menu">
           <a mat-button href="#about" (click)="sidenav.close()">About Us</a>
           <a mat-button href="#people" (click)="sidenav.close()">Our People</a>

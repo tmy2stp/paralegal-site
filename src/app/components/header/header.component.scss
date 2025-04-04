@@ -17,21 +17,20 @@ $offwhite: #f9f9f9;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  flex-wrap: nowrap;
   height: auto;
   min-height: 90px;
-
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
   background-color: $offwhite;
   transition: all 0.3s ease;
+  flex-wrap: nowrap;
 
   .logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    height: 100%;
 
     .logo {
       height: 64px;
@@ -46,8 +45,7 @@ $offwhite: #f9f9f9;
       font-weight: 700;
       color: black;
 
-      .line-1,
-      .line-2 {
+      .line-1, .line-2 {
         font-size: 1.1rem;
       }
 
@@ -69,7 +67,6 @@ $offwhite: #f9f9f9;
       align-items: center;
       gap: 1rem;
       padding-bottom: 0.25rem;
-      transition: opacity 0.3s ease;
 
       .phone {
         display: flex;
@@ -119,9 +116,11 @@ $offwhite: #f9f9f9;
     }
   }
 
+  @media (min-width: 768px) {
   .mobile-menu-button {
     display: none;
   }
+}
 
   &.sticky {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -147,60 +146,65 @@ $offwhite: #f9f9f9;
     align-self: center;
   }
 
-  .mobile-sidenav {
-    display: block;
-    height: auto;
-
-    .mobile-menu {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      gap: 1rem;
-
-      a,
-      .phone,
-      .btn-primary {
-        color: $blue;
-        font-family: 'Cormorant', serif;
-      }
-
-      .btn-primary {
-        border: 2px solid $blue;
-        background: transparent;
-        text-transform: none;
-
-        &:hover {
-          background-color: $blue;
-          color: white;
-        }
-      }
-
-      .phone {
-        display: flex;
-        align-items: center;
-        font-size: 0.9rem;
-
-        mat-icon {
-          font-size: 18px;
-          margin-right: 0.3rem;
-        }
-      }
+  .logo-container .logo-text {
+    .line-1,
+    .line-2 {
+      font-size: 1rem;
     }
   }
 
-  .logo-container {
-    .logo-text {
-      .line-1,
-      .line-2 {
-        font-size: 1rem;
+  .mobile-sidenav-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1200;
+
+    mat-sidenav {
+      width: 100%;
+      padding: 1rem;
+      background-color: white;
+
+      .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a,
+        .phone,
+        .btn-primary {
+          color: $blue;
+          font-family: 'Cormorant', serif;
+        }
+
+        .btn-primary {
+          border: 2px solid $blue;
+          background: transparent;
+          text-transform: none;
+
+          &:hover {
+            background-color: $blue;
+            color: white;
+          }
+        }
+
+        .phone {
+          display: flex;
+          align-items: center;
+          font-size: 0.9rem;
+
+          mat-icon {
+            font-size: 18px;
+            margin-right: 0.3rem;
+          }
+        }
       }
     }
   }
 }
 
-
-.header-toolbar.sticky {
-    padding-bottom: 0.4rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
+// Extra offset for main content under sticky header
+.main-content {
+  margin-top: 100px;
+}
