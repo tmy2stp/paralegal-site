@@ -1,63 +1,60 @@
 <header class="header-wrapper">
-    <mat-toolbar class="header-toolbar" [class.sticky]="isSticky">
-  
-      <!-- Logo (click to scroll to top) -->
-      <!-- <a href="#hero" class="logo-container">
-        <img src="assets/logo.svg" alt="Logo" class="logo" />
+  <mat-toolbar class="header-toolbar" [class.sticky]="isSticky">
 
-      </a> -->
-      <div class="logo-container" routerLink="/" style="cursor: pointer;">
-        <img src="assets/logo.jpg" alt="Logo" class="logo" />
-        <div class="logo-text">
-          <div class="line-1">Need The</div>
-          <div class="line-2">Logo</div>
-        </div>
-      </div>
-      
-  
-      <!-- Desktop content -->
-      <div class="desktop-right">
-        <!-- Phone + Button only when not sticky -->
-        <div class="top-row" *ngIf="!isSticky">
-          <span class="phone"><mat-icon>call</mat-icon> 1800 000 000</span>
-          <a href="#booking">
-            <button mat-button class="btn-primary">Book A Consultation</button>
-          </a>
-        </div>
-  
-        <!-- Always-visible nav links -->
-        <nav class="nav-links">
-          <a mat-button href="#about">About Us</a>
-          <a mat-button href="#people">Our People</a>
-          <a mat-button href="#expertise">Areas Of Expertise</a>
-          <a mat-button href="#services">Legal Services</a>
-          <a mat-button href="#booking">Booking</a>
-          <a mat-button href="#footer">Contact Us</a>
-        </nav>
-      </div>
-  
-      <!-- Mobile burger menu -->
+    <!-- Left: Logo -->
+    <div class="logo-container" routerLink="/" style="cursor: pointer;">
+      <img src="assets/logoactual.svg" alt="Logo" class="logo" />
+      <span class="logo-text ">
+        <span>Gangadin &</span>
+        <span>Company Legal</span>
+        <span>Services</span>
+      </span>
+
+    </div>
+
+    <!-- Center: Nav Links (Desktop Only) -->
+    <nav class="nav-links desktop-only">
+      <a mat-button href="#about">About Us</a>
+      <a mat-button href="#people">Our People</a>
+      <a mat-button href="#services">Services</a>
+      <a mat-button href="#expertise">Areas Of Expertise</a>
+      <a mat-button href="#booking">Booking</a>
+      <a mat-button href="#footer">Contact</a>
+    </nav>
+
+    <!-- Right: Button (Desktop), Burger (Mobile) -->
+    <div class="right-actions">
+      <a href="#booking" class="desktop-only">
+        <button mat-button class="btn-primary">Book A Consultation</button>
+      </a>
       <div class="mobile-menu-button">
         <button mat-icon-button (click)="toggleSidenav()">
-          <mat-icon>menu</mat-icon>
+          <div class="burger-icon" [class.open]="isMenuOpen" >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
       </div>
-    </mat-toolbar>
-  
-    <!-- Mobile sidenav -->
-    <mat-sidenav-container class="mobile-sidenav-container">
-      <mat-sidenav #sidenav mode="over" position="end" disableClose>
-        <nav class="mobile-menu">
-          <a mat-button href="#about" (click)="sidenav.close()">About Us</a>
-          <a mat-button href="#people" (click)="sidenav.close()">Our People</a>
-          <a mat-button href="#expertise" (click)="sidenav.close()">Areas Of Expertise</a>
-          <a mat-button href="#services" (click)="sidenav.close()">Legal Services</a>
-          <a mat-button href="#booking" (click)="sidenav.close()">Booking</a>
-          <a mat-button href="#footer" (click)="sidenav.close()">Contact Us</a>
-          <span class="phone"><mat-icon>call</mat-icon> 1800 000 000</span>
-          <button mat-button class="btn-primary">Book A Consultation</button>
-        </nav>
-      </mat-sidenav>
-    </mat-sidenav-container>
-  </header>
-  
+    </div>
+  </mat-toolbar>
+
+  <!-- Mobile Sidenav -->
+  <mat-sidenav-container class="mobile-sidenav-container">
+    <mat-sidenav #sidenav mode="over" position="start" [opened]="isMenuOpen" (closedStart)="isMenuOpen = false" >
+    
+   
+
+      <nav class="mobile-menu">
+        <!-- <button class="close-button" (click)="sidenav.close(); isMenuOpen = false">×</button> -->
+        <a mat-button href="#about" (click)="sidenav.close(); isMenuOpen = false">About Us</a>
+        <a mat-button href="#expertise" (click)="sidenav.close(); isMenuOpen = false">Expertise</a>
+        <a mat-button href="#services" (click)="sidenav.close(); isMenuOpen = false">Services</a>
+        <a mat-button href="#booking" (click)="sidenav.close(); isMenuOpen = false">Booking</a>
+        <a mat-button href="#footer" (click)="sidenav.close(); isMenuOpen = false">Contact</a>
+        <button mat-button class="btn-primary">Book A Consultation</button>
+      </nav>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</header>
+

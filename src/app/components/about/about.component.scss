@@ -9,30 +9,40 @@ $offwhite: #f9f9f9;
   padding: 4rem 2rem;
   font-family: 'Cormorant', serif;
 
+  .about-heading {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: $blue;
+    margin-bottom: 2rem;
+  }
+
   .about-content {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4rem;
-    max-width: 1200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 90%;
     margin: 0 auto;
   }
 
   .about-left {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
+    max-width: 600px;
 
-    h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .subheading {
+      font-size: 1.2rem;
+      font-weight: 600;
       color: $blue;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 2rem;
     }
 
     .btn-primary {
@@ -53,63 +63,67 @@ $offwhite: #f9f9f9;
 
   .about-right {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 
-    .specialty {
+    .info-card {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1.5rem;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
 
       mat-icon {
-        font-size: 28px;
+        font-size: 36px;
+        min-width: 36px;
+        min-height: 36px;
         color: $blue;
-        margin-top: 0.3rem;
+        flex-shrink: 0;
       }
 
-      .specialty-text {
-        h4 {
-          margin: 0 0 0.5rem 0;
+      .card-text {
+        h3 {
           font-size: 1.1rem;
-          font-weight: 600;
           color: $blue;
+          margin-bottom: 0.5rem;
         }
 
-        .btn-secondary {
-          border: 2px solid $blue;
-          background-color: transparent;
-          color: $blue;
-          border-radius: 0;
-          padding: 0.3rem 0.8rem;
-          font-weight: 500;
-          text-transform: none;
-
-          &:hover {
-            background-color: $blue;
-            color: white;
-          }
+        p {
+          margin: 0;
+          font-size: 0.95rem;
+          line-height: 1.5;
         }
       }
     }
   }
 
-  // 📱 Mobile styles
   @media (max-width: 768px) {
     .about-content {
       flex-direction: column;
       align-items: center;
+    }
+
+    .about-left, .about-right {
+      max-width: 100%;
       text-align: center;
     }
 
-    .about-left,
-    .about-right {
+    .about-right .info-card {
+      flex-direction: column;
       align-items: center;
       text-align: center;
+
+      mat-icon {
+        margin-bottom: 0.5rem;
+      }
     }
 
-    .about-left button {
+    .about-left .btn-primary {
       align-self: center;
     }
   }

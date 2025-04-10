@@ -1,13 +1,28 @@
 <section class="services-section">
-    <div class="container">
-      <h2>Services We Offer</h2>
-      <div class="services-grid">
-        <div class="service-block" *ngFor="let service of services">
+  <div class="container">
+    <h2>Services We Offer</h2>
+    <div class="scroll-controls">
+      <button class="scroll-btn" (click)="scroll('left')">←</button>
+      <button class="scroll-btn" (click)="scroll('right')">→</button>
+    </div>
+
+    <div #scrollContainer class="scroll-container" (scroll)="updateProgressBar()">
+
+      <div class="service-card" *ngFor="let service of services"
+        [ngStyle]="{ 'background-image': 'url(' + (service.image || defaultImage) + ')' }">
+        <div class="card-content">
           <h4>{{ service.title }}</h4>
-          <p>{{ service.copy }}</p>
-          <p class="read-more" >Read More</p>
+          <div class="card-back">
+            <p>{{ service.copy }}</p>
+            <span class="read-more">Read More</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  
+
+    <div class="scroll-progress">
+      <div class="progress-fill" #progressBar></div>
+    </div>
+
+  </div>
+</section>

@@ -2,12 +2,14 @@
     background-image: url('/assets/hero2.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
     color: white;
+    margin-top: -100px; 
+    padding-top: -10px;
   }
   
   .hero-overlay {
@@ -46,6 +48,7 @@
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5rem;
+        margin-top: 300px;
       }
   
       p {

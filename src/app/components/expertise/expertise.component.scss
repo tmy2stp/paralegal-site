@@ -1,59 +1,87 @@
+$blue: #003366;
+$offwhite: #f9f9f9;
+$charcoal: rgba(0, 0, 0, 0.6);
+
 .expertise-section {
-    background-color: #f7e7ce;
-    padding: 4rem 1rem;
-    overflow: visible;
-    color: #000;
-  
-    h2 {
-      font-family: 'Cinzel', serif;
-      margin-bottom: 2rem;
-    }
-  
-    .expertise-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2rem;
-  
-      @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
-    }
-  
-    .expertise-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
-        width: 100px;
-        min-height: 100px; 
-        overflow: visible; 
-        padding: 1rem 0;
-      
-        mat-icon {
-          font-size: 48px;
-          width: 48px;
-          height: 48px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #003366;
-          line-height: 1; 
-          margin-bottom: 0.5rem;
-        }
-      
-        p {
-          margin: 0;
-          font-family: 'Cormorant', serif;
-        }
-      }
-  
-    .about-btn {
-      background-color: #003366;
-      color: white;
+  position: relative;
+  background: url('/assets/hero1.jpg') center center / cover no-repeat;
+  padding: 4rem 1rem;
+  color: $offwhite;
+  overflow: visible;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); 
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 2rem;
+    color: $offwhite;
+  }
+
+  .expertise-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
   }
-  
+
+  .expertise-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    min-height: 100px;
+    padding: 1rem 0;
+
+    mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $offwhite;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-family: 'Cormorant', serif;
+      color: $offwhite;
+    }
+  }
+
+  .about-btn {
+    background-color: $blue;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    text-transform: none;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      background-color: darken($blue, 5%);
+    }
+  }
+}
