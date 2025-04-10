@@ -15,57 +15,57 @@ export class ServicesComponent {
     {
       title: 'Landlord and Tenant Disputes',
       copy: 'Expert representation for both landlords and tenants navigating the complexities of Ontario housing law.',
-      image: '/assets/services/landlord-tenant.jpg'
+      image: '/assets/landlord-tenant.jpg'
     },
     {
       title: 'N12 Notice',
       copy: 'Proper service and defense of N12 Notices related to landlord personal use or purchaser occupancy.',
-      image: '/assets/services/n12.jpg'
+      image: '/assets/n12.jpg'
     },
     {
       title: 'End of Tenancy',
       copy: 'Guidance through lease termination processes with compliance to provincial regulations.',
-      image: '/assets/services/end-tenancy.jpg'
+      image: '/assets/end-tenancy.jpg'
     },
     {
       title: 'Landlord Renovation',
       copy: 'Support with legal notices and procedures when planning renovations that impact tenancy.',
-      image: '/assets/services/renovation.jpg'
+      image: '/assets/renovation.jpg'
     },
     {
       title: 'Tenant Damages',
       copy: 'Claims, documentation, and hearings regarding property damage caused by tenants.',
-      image: '/assets/services/tenant-damage.jpg'
+      image: '/assets/tenant-damage.jpg'
     },
     {
       title: 'Unpaid Tenant Bills',
       copy: 'Recovery of unpaid rent and utility costs through legal filings and tribunal appearances.',
-      image: '/assets/services/unpaid-bills.jpg'
+      image: '/assets/unpaid-bills.jpg'
     },
     {
       title: 'Illegal Activity',
       copy: 'Immediate legal action and representation in cases involving illegal activity in rental units.',
-      image: '/assets/services/illegal-activity.jpg'
+      image: '/assets/illegal-activity.jpg'
     },
     {
       title: 'Tenant Eviction',
       copy: 'From notice to hearing to enforcement, we manage eviction processes professionally and lawfully.',
-      image: '/assets/services/eviction.jpg'
+      image: '/assets/eviction.jpg'
     },
     {
       title: 'Landlord Legal',
       copy: 'Comprehensive legal support for landlords, from lease drafting to tribunal advocacy.',
-      image: '/assets/services/landlord-legal.jpg'
+      image: '/assets/landlord-legal.jpg'
     },
     {
       title: 'Tenant Legal Aid',
       copy: 'Affordable, accessible legal services for tenants facing disputes or eviction notices.',
-      image: '/assets/services/tenant-aid.jpg'
+      image: '/assets/tenant-aid.jpg'
     },
     {
       title: 'Emergency Notary',
       copy: 'Fast, mobile notary services for urgent legal documentation across the GTA.',
-      image: '/assets/services/notary.jpg'
+      image: '/assets/notary.jpg'
     }
   ];
 

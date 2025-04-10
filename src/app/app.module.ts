@@ -20,6 +20,7 @@ import { LawyerDetailComponent } from './components/lawyer-detail/lawyer-detail.
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { SplashComponent } from './splash/splash.component';
 
 
 
@@ -37,6 +38,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
     HomeComponent,
     AboutComponent,
     ReviewsComponent,
+    SplashComponent,
 
 
 
